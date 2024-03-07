@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+#user-input{
+    margin: auto;   
+}
+
+app-question.disabled {
+    opacity: 0.5; 
+    pointer-events: none;
+
+
+    .play-pause,
+    .option-button,
+    app-album-art,
+    img
+     {
+        opacity: 0.8;
+    }
+  }
+  button{
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+  }

@@ -1,0 +1,32 @@
+<div>
+   <app-header></app-header>
+</div>
+<div class="home-container">
+  <div *ngIf="authLoading || configLoading">Loading...</div>
+
+  <div class="home-box" *ngIf="!authLoading && !configLoading">
+
+    <h2>get started:</h2>
+    
+    <h3 class="text">genre:</h3>
+    <select class="select__1" [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)">
+      <option [value]="" disabled></option>
+      <option [value]="genre" *ngFor="let genre of genres">
+        {{ genre }}
+      </option>
+    </select>
+
+    <h3 class="text">mode:</h3>
+    <select class="select__2" [(ngModel)]="gameMode" (ngModelChange)="setGameMode($event)">
+      <option value=""></option>
+      <option value="Friendly">Friendly</option>
+      <option value="Competitive">Competitive</option>
+    </select>
+
+    <button class="start-btn" (click)="loadPlaylists(selectedGenre)">Start Your Quiz</button>
+    
+  </div>
+
+</div>
+
+

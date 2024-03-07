@@ -1,0 +1,21 @@
+
+<div class="question-container">
+  <div class = "play-pause" (click)="togglePlayPause()">
+      <i [ngClass]="{'fa-solid fa-play': !isPlaying, 'fas fa-pause': isPlaying}"></i>
+    </div>
+    
+    <div id="album" *ngFor="let option of options" >
+      <button 
+      class="option-button" 
+      (click)="selectedOption = option; 
+      checkAnswer(); passIsCorrect(isCorrect)" 
+      [class.selected]="selectedOption == option">
+
+      <app-album-art class="art" [albumArtURL]="option.albumArtURL" ></app-album-art>
+
+      </button>
+    </div>
+</div> 
+      
+
+  <!-- need to add pngs for the correct and incorrect icons -->

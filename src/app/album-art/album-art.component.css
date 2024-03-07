@@ -1,0 +1,11 @@
+.album-art {
+width: 150px; 
+height: 150px;
+border-radius: 10%;
+
+}
+
+.artbox {
+    width: 150px;
+    height: 150px;
+}

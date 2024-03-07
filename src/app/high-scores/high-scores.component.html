@@ -1,0 +1,26 @@
+<div>
+    <app-header></app-header>
+</div>
+<div class="container">
+    <div id="title">
+        <h2>high scores</h2>
+    </div>
+<div class="list-container">
+    <table>
+        <tr>
+            <th>username</th>
+            <th>score</th>
+            <th>genre</th>
+        </tr>
+        <tr *ngFor=" let highScore of allHighScores">
+            <td>{{highScore.username}}</td>
+            <td>{{highScore.score}}</td>
+            <td>{{highScore.genre}}</td>
+        </tr>
+    </table>
+     <!-- <ul>
+        <li *ngFor=" let highScore of allHighScores">{{highScore.username}} : {{highScore.score}} : {{highScore.genre}}</li>
+    </ul>    -->
+</div>  
+   <button (click)="returnHome()">Home</button>
+</div>

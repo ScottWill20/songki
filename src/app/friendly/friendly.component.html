@@ -1,0 +1,61 @@
+<div>
+  <app-header></app-header>
+</div>
+<div class="friendly-container">
+    <app-question
+    class="question-box__1"
+      [playlists]="playlists"
+      [ngClass]="{
+        'disabled': !questionOneActive,
+        'answered': questionOneAnswered && !questionOneActive,
+        'correct': questionOneCorrect === true,
+        'incorrect': questionOneCorrect === false
+      }"
+      [attr.disabled]="questionOneActive ? null : true"
+      (passIsCorrectEvent)="updateScore($event)"
+      
+    ></app-question>
+  
+    <!-- Question Two -->
+    <app-question
+    class="question-box__2"
+      [playlists]="playlists"
+      [ngClass]="{
+        'disabled': !questionTwoActive,
+        'answered': questionTwoAnswered && !questionTwoActive,
+        'correct': questionTwoCorrect === true,
+        'incorrect': questionTwoCorrect === false
+      }"
+      [attr.disabled]="questionTwoActive ? null : true"
+      (passIsCorrectEvent)="updateScore($event)"
+    ></app-question>
+  
+    <!-- Question Three -->
+    <app-question
+        class="question-box__3"
+      [playlists]="playlists"
+      [ngClass]="{
+        'disabled': !questionThreeActive,
+        'answered': questionThreeAnswered && !questionThreeActive,
+        'correct': questionThreeCorrect === true,
+        'incorrect': questionThreeCorrect === false
+      }"
+      [attr.disabled]="questionThreeActive ? null : true"
+      (passIsCorrectEvent)="updateScore($event)"
+    ></app-question>
+  
+    <app-score-popup 
+    *ngIf="isPopupVisible" 
+    [userScore]="userScore" 
+    (closePopup)="closePopup()"
+    ></app-score-popup>
+  
+</div>
+  
+
+
+  
+  
+  
+  
+  

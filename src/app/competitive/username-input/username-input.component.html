@@ -1,0 +1,9 @@
+<div id="input-container">
+    <div id="input-content">
+    <h2>your score: </h2>
+    <h2>{{score}}</h2>
+    <h3>enter a username:</h3>
+    <input type="text" [(ngModel)]="username">
+    <button (click)="onSubmitScore(username, score)">submit your score</button>
+    </div>
+</div>

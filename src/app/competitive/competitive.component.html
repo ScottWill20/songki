@@ -1,0 +1,16 @@
+<div>
+    <app-header></app-header>
+</div>
+<div class="container">
+    
+    <app-question [playlists] = "playlists" 
+    [ngClass]="{
+        'disabled' : promptUserScore
+    }"
+    (passIsCorrectEvent)="receivedIsCorrect($event)" 
+    [attr.disabled]="promptUserScore" [attr.disabled]="promptUserScore"> 
+    </app-question>
+    <button 
+    (click)="submitAnswer(isCorrectCompetitive)">Submit</button>
+    <app-username-input *ngIf="promptUserScore" [score]="currentScore" id="user-input"></app-username-input>
+</div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&display=swap');
+
+body{
+    font-family: "Chakra Petch", sans-serif;
+}
+button{
+    font-family: "Chakra Petch", sans-serif;
+    border-radius: 25px;
+    background-color: #356d64 !important;
+    color: white;
+    font-weight: 400;
+    padding: 5px;
+}
+button:hover{
+    background-color: #29554e;
+    border: 1.5px solid black
+}
+  
